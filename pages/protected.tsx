@@ -1,6 +1,12 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import { getSession } from "next-auth/react";
 import React from "react";
+
+
+export const config = {
+	runtime: 'edge',
+};
+
 export default function Index({
   user,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
